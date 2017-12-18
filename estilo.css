@@ -1,0 +1,480 @@
+    *{
+        margin:0;
+        padding: 0;
+    }
+
+    /*Criação do menu e seus sub menus*/
+
+    .menu{
+        width: 100%;
+        height: 50px;
+        background-color: #222;
+        font-family: sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+    }
+
+    .sub-menu {
+    background: #222;
+    
+    }
+
+    .menu ul{
+        list-style: none;
+        position: relative;
+        z-index: 5;        
+    }
+
+    .menu ul li{
+        width: 150px;
+        float: left;
+        position: relative;
+        margin-left: 5%;
+        
+        
+
+    }
+
+    .menu a{
+        padding: 15px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background-color: #222;
+        color: white;
+    }
+
+    .menu ul ul{
+        position: absolute;
+        visibility: hidden;
+
+    }
+
+    .menu ul li:hover ul{
+        visibility: visible;
+
+    }
+
+    .menu a:hover{
+        background-color: #f4f4f4;
+        color: #555;
+    }
+
+    .menu ul ul li{
+        float: none;
+        border-bottom: none;
+    }
+
+    .menu ul ul li a{
+        background-color: #069;
+    }
+
+    label[for="bt_menu"]{
+        padding: 5px;
+        background-color: #222;
+        color: white;
+        font-family: 'Arial';
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    #bt_menu{
+        display: none;
+    }
+
+    label[for="bt_menu"]{
+        display: none;
+    }
+
+    @media(max-width: 800px){
+
+        label[for="bt_menu"]{
+            display: block;
+        }
+
+        #bt_menu:checked ~ .menu{
+            margin-left: 0;
+        }
+
+        .menu{
+            margin-top:5px; 
+            margin-left: -100%;
+            transition: all .4s;
+        }
+
+        .menu ul li{
+            width: 100%;
+            float: none;
+        }
+
+        .menu ul ul{
+            position: static;
+            overflow: hidden;
+            max-height: 0;
+            transition: all .4px;          
+        }
+
+        .menu ul li:hover ul{
+            height: auto;
+            max-height: 200px;
+        }
+    }
+
+
+/*Restante do layout*/
+
+body {
+
+background: url(imagens/b2.jpg) center center no-repeat fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+font-family: Helvetica, sans-serif;
+font-size: 62.5%;
+color: #333;
+margin: 0;
+padding: 0;
+}
+
+img{
+
+    width: 100%;
+    height: 250px;
+    bottom: 90%;
+    left: 0%;
+    right: 0%;
+    top:0%;
+    position: relative;
+}
+
+img.lucas{
+
+    float: left;
+    width: 30%;
+    height: 400px;
+    right: 60%;
+    margin-right: 50px;
+    border-radius: 10px;
+
+}
+
+img.conteudo{
+
+    float: left;
+    width: 30%;
+    height: 200px;
+    right: 60%;
+    margin-right: 50px;
+    border-radius: 10px;
+
+}
+
+img.design{
+
+    float: left;
+    width: 30%;
+    height: 400px;
+    right: 60%;
+    margin-left: 35%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+
+}
+
+img.design2{
+
+    float: left;
+    width: 30%;
+    height: 300px;
+    right: 60%;
+    margin-left: 35%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+
+}
+
+img.design3{
+
+    float: left;
+    width: 30%;
+    height: 500px;
+    right: 60%;     
+    margin-left: 35%;
+    border-radius: 10px;
+    margin-bottom: 3%;
+
+}
+
+img.netbeans{
+
+    float: center;
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    
+}
+
+img.pesquisa{
+
+    float: center;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    
+    
+}
+
+img.bases{
+
+    float: center;
+    width:50%;
+    height: 50%;
+    margin-left: 25%;
+
+}
+
+img.trabalho{
+
+    float: center;
+    width:50%;
+    height: 50%;
+    margin-left: 25%;
+
+}
+
+h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.4em;
+}
+
+p.design{
+
+    font-size: 1.4em;
+    line-height: 1.4em;
+    text-align: left;
+    margin-left: 29%;
+
+}
+
+header{
+
+     width:100%;
+     z-index: 0;
+     
+
+}
+
+p{
+
+    text-align: justify;
+    text-indent: 5%;
+
+}
+
+h1{
+
+    font-size: 500%;
+
+}
+
+h2{
+
+    text-align: center;
+
+}
+
+h2.diferente{
+
+    clear: both;
+
+}
+
+h3{
+
+    text-align: center;
+
+}
+
+
+
+section{
+    margin: 3% auto;
+    padding: 10px;
+    width: 85%;
+    background: #fff;
+    border: 10px solid #151515;
+    border-radius: 10px;
+
+}
+
+article, aside {
+    width: 360px;
+    margin: 20px 0 30px 0;
+    padding: 10px;
+}
+article {
+    float: left;
+    width: 71% 
+        
+}
+
+article h2 {
+    font-size: 2em;
+    margin: 0 0 10px 0;
+}
+
+article p {
+    margin: 0 0 10px 0;
+    
+}
+
+article ul {
+    margin: 20px 0 0 0;
+    font-size: 1.4em;
+}
+
+article ul  li {
+    margin: 0 0 10px 0;
+}
+
+aside {
+    
+    float: left;
+    background: #eee;
+    width: 23%;
+    min-width: 100px;
+    
+    
+
+}
+
+aside h2 {
+    border-bottom: 5px solid #ccc;
+    margin: 0 0 20px 0;
+    padding: 5px;
+}
+
+aside li {
+    margin: 0 10px 20px 0;
+    
+    border: 5px solid #ddd;
+}
+
+aside img {
+max-width:300px;
+min-width: 100px;
+ height:auto;
+}
+
+aside img.lucas{
+
+    width: 100%;
+
+}
+
+footer {
+    clear: both;
+    background: #eee;
+    padding: 10px;
+    border-top: 2px solid #ddd;
+    text-align: center;
+    color: #777;
+
+}
+
+footer p{
+
+text-align: center;
+
+}
+
+.btn{
+
+padding: 10px;
+border: none;
+cursor: pointer;
+margin:25% auto auto 30%;
+border-radius: 10px;
+font-family: arial;
+font-size: 14px;
+text-transform: uppercase;
+font-weight: 700;
+text-decoration: none;
+
+}
+
+.btnins{
+
+padding: 10px;
+border: none;
+cursor: pointer;
+margin:25% auto auto 50%;
+border-radius: 10px;
+font-family: arial;
+font-size: 14px;
+text-transform: uppercase;
+font-weight: 700;
+text-decoration: none;
+
+}
+
+
+
+.btn-gray{
+    background: gray;
+    color: white;
+    box-shadow: 0 5px 0 black;
+}
+
+.btn-gray:hover{
+
+background: #778899;
+color: white;
+box-shadow: 0 5px 0 black;
+
+}
+
+.btn-gray:active{
+
+position: relative;
+top: 5px;
+box-shadow: none;
+border-radius: 10px;
+
+}
+
+
+
+@media screen and (max-width: 920px){
+    article{
+        width:95%;
+    }
+
+    aside{
+        width: 95%;
+    }
+
+    aside li {
+        margin: 0 30% 20px 30%;
+    }
+
+    aside img.lucas{
+        width: 100%;
+        margin: 0 30% 20px 30%;
+    }
+    
+}
+
+
