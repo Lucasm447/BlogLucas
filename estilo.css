@@ -330,6 +330,8 @@ article {
         
 }
 
+
+
 article h2 {
     font-size: 2em;
     margin: 0 0 10px 0;
@@ -456,6 +458,28 @@ border-radius: 10px;
 }
 
 
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  width: 313%;
+ 
+}
+
+.box:nth-child(even) {
+  background-color: #ccc;
+  color: #000;
+}
+
+    .wrapper {
+        width: 100px;
+        display: grid;
+        grid-gap: 305%;
+        grid-template-columns: repeat(6, 100px);
+    }
+
+ 
 
 @media screen and (max-width: 920px){
     article{
@@ -473,6 +497,24 @@ border-radius: 10px;
     aside img.lucas{
         width: 100%;
         margin: 0 30% 20px 30%;
+    }
+
+    .box {
+        background-color: #444;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        width: 313%; 
+        height: 250%;
+    }
+
+    .wrapper {
+        width: 100px;
+        display: grid;
+         grid-gap: 200px;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: 100px 100px 100px 10px;
+        grid-auto-flow: column;
     }
     
 }
